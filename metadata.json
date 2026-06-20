@@ -1,0 +1,6 @@
+{
+  "name": "BiteBudget",
+  "description": "AI-powered cooking to-do list, fridge scanner, and budget-conscious meal planner.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

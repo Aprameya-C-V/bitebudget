@@ -1,0 +1,108 @@
+/* 1. External Font Integration */
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+@import "tailwindcss";
+
+/* 2. Global Styling System */
+:root {
+  color-scheme: dark;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #030712;
+  overflow-x: hidden;
+}
+
+/* 3. Typography Helpers */
+.font-display {
+  font-family: 'Outfit', sans-serif;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* 4. Custom Scrollbar Styling (Premium Sleek Theme) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(3, 7, 18, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 246, 0.25);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 246, 0.5);
+}
+
+/* 5. Custom Glassmorphism Card Style Utility */
+.glass-panel {
+  background: linear-gradient(135deg, rgba(30, 41, 59, 0.4) 0%, rgba(15, 23, 42, 0.4) 100%);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-panel:hover {
+  border-color: rgba(139, 92, 246, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(139, 92, 246, 0.05);
+}
+
+/* 6. Active Item Glowing States */
+.active-meal-glow {
+  border-color: rgba(139, 92, 246, 0.6) !important;
+  box-shadow: 0 0 25px rgba(139, 92, 246, 0.15) !important;
+}
+
+/* 7. Keyframes & Transitions */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Customize Range inputs to look clean */
+input[type="range"]::-webkit-slider-thumb {
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.5);
+  border: 2px solid #ffffff;
+}
+
+/* Pulsing accent line */
+.accent-glow-line {
+  background: linear-gradient(90deg, transparent, #8b5cf6, #d946ef, transparent);
+  height: 1px;
+  width: 100%;
+}
+
+@keyframes floatGlow {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, -40px) scale(1.15);
+  }
+}
+.animate-float-slow {
+  animation: floatGlow 12s ease-in-out infinite;
+}
+.animate-float-slow-reverse {
+  animation: floatGlow 16s ease-in-out infinite reverse;
+}
+
